@@ -6,7 +6,7 @@ from tkinter import filedialog
 import tkinter.messagebox as tkm
 import audioread
 secretsGenerator = secrets.SystemRandom()
-import time
+import time, threading
 user32 = ctypes.windll.user32
 screensize = [user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)]
 root = Tk()
@@ -67,7 +67,7 @@ Select.place(x = 0, y = 48)
 directory_box = Text(root, fg="black", highlightthickness="1", height=2, width=width_screen//12, bg="yellow")
 directory_box.place(x = 120, y = 40)
 Directory.replace("/", "//")
-myDown = Button(root, text="True Shuffle!", command = playAction, padx=6, pady=10)
+myDown = Button(root, text="True Shuffle!", command = threading.Thread(target=playAction).start, padx=6, pady=10)
 myDown.place(x = 590, y = 35)
 
 
