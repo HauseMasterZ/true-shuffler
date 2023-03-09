@@ -62,14 +62,16 @@ def openFilePicker():
 
 
 Select = Button(root, text="Select Music Folder", command= openFilePicker)
-Select.place(x = 0, y = 48)
+# Select.place(x = 0, y = 48)
+Select.pack(side=LEFT, padx=10)
 
 directory_box = Text(root, fg="black", highlightthickness="1", height=2, width=width_screen//12, bg="yellow")
-directory_box.place(x = 120, y = 40)
+# directory_box.place(x = 120, y = 40)
+directory_box.pack(side=LEFT, padx=20)
 Directory.replace("/", "//")
 myDown = Button(root, text="True Shuffle!", command = threading.Thread(target=playAction).start, padx=6, pady=10)
-myDown.place(x = 590, y = 35)
-
+# myDown.place(x = 590, y = 35)
+myDown.pack(side=RIGHT, padx=10)
 
 root.mainloop()
 
