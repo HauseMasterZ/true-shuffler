@@ -71,14 +71,14 @@ def updateHeight(event):
     directory_box.config(height=directory_box.get('1.0', END).count('\n'))
 
 
-Select = Button(root, text="Select Music Folder", command=openFilePicker)
-Select.place(relx=0.01, rely=0.5, anchor=W)
-
 directory_box = Text(root, fg="black", highlightthickness="1",
                      height=1, bg="yellow")
 directory_box.place(relwidth=0.7, relx=0.5, rely=0.5, anchor=CENTER)
 directory_box.bind("<Key>", updateHeight)
 Directory.replace("/", "//")
+
+Select = Button(root, text="Select Music Folder", command=openFilePicker)
+Select.place(relx=0.01, rely=0.5, anchor=W, )
 
 myDown = Button(root, text="True Shuffle!", command=threading.Thread(
     target=playAction).start, padx=6, pady=10)
