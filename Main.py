@@ -20,7 +20,7 @@ root.title("True Shuffler")
 root.update()
 # Heading
 title = Label(root, text="True Shuffler ~ HauseMaster", font=("Aerial", 13))
-title.grid(row=0, column=1)
+title.place(relx=0.5, y=40, anchor=CENTER)
 
 Directory = ""
 dir_musics = []
@@ -73,7 +73,7 @@ def updateHeight(event):
 
 directory_box = Text(root, fg="black", highlightthickness="1",
                      height=1, bg="yellow")
-directory_box.place(relwidth=0.7, relx=0.5, rely=0.5, anchor=CENTER)
+directory_box.place(relwidth=0.7, relx=0.52, rely=0.5, anchor=CENTER)
 directory_box.bind("<Key>", updateHeight)
 Directory.replace("/", "//")
 
