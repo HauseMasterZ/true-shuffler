@@ -12,4 +12,4 @@ That is why this program exists, This app generates cryptographically strong ran
 
 
 # INSTALLATION
-Very simple portable installation, Just download .exe file and run it.
+Very simple portable installation, Just download .exe file and run it
